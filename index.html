@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HELLO TIC-TAC-TOE 2</title>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        /* turn indicator and win condition message style */
+        .turn-ind, .win-con {
+            border: 2px solid #000000;
+            padding: 10px;
+            margin: 10px;
+            font-size: 24px;
+        }
+
+        /* grid style */
+        .ttt-grid {
+            display: grid;
+            grid-template-columns: 100px 100px 100px;
+            grid-gap: 10px;
+        }
+
+        /* each square style */
+        .square {
+            background-color: #add8e6;
+            text-align: center;
+            font-size: 50px;
+            line-height: 100px;
+            width: 100px;
+            height: 100px;
+        }
+
+        .square:hover {
+            background-color: #90ee90;
+        }
+    </style>
+</head>
+<body>
+
+<h1>HELLO TIC-TAC-TOE</h1>
+
+<div class="turn-ind">X's Turn</div>
+
+<script>
+document.write('<div class="ttt-grid">');
+
+const NUM_SQUARES = 9;
+for (let i = 0; i < NUM_SQUARES; i++) {
+    let id = "sq" + i;
+    document.write("<div class='square' id='" + id + "'></div>");
+}
+// Closes the TTT grid div 
+document.write('</div>');
+//places the X and 0 for spec
+document.getElementById('sq2').textContent = 'X';
+document.getElementById('sq3').textContent = 'O'; 
+</script>
+
+<div class="win-con" id="win-con">Player X Wins!</div>
+
+</body>
+</html>
